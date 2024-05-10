@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Price</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/depositphotos_10085041-stock-photo-new-houses.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Additional CSS for form styling */
+        form {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align:center;">Enter Property Details</h1>
+        <form action="/predict" method="post">
+            <label for="beds">Beds:</label>
+            <input type="number" id="beds" name="beds" required><br><br>
+
+            <label for="baths">Baths:</label>
+            <input type="number" id="baths" name="baths" required><br><br>
+
+            <label for="size">Size:</label>
+            <input type="number" id="size" name="size" required><br><br>
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
+
